@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "dependencies": {
+    "@cheprasov/qrcode": "^0.1.0",
+    "@snowpack/plugin-optimize": "^0.2.10",
+    "aframe": "^1.1.0",
+    "firebase": "^8.1.1",
+    "jszip": "^3.5.0",
+    "preact": "^10.5.4",
+    "preact-router": "^3.2.1"
+  },
+  "devDependencies": {
+    "@firebase/app-types": "^0.6.1",
+    "@prefresh/snowpack": "^2.0.1",
+    "@snowpack/plugin-run-script": "^2.2.1",
+    "@snowpack/plugin-typescript": "^1.1.0",
+    "@types/aframe": "^1.0.2",
+    "copyfiles": "^2.4.1",
+    "snowpack": "next",
+    "snowpack-plugin-sass": "^1.0.1",
+    "snowpack-plugin-terser": "^0.1.0",
+    "terser": "^5.5.1",
+    "typescript": "^4.0.3"
+  }
+}

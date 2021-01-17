@@ -1,0 +1,1 @@
+export let v: string = '__version__';

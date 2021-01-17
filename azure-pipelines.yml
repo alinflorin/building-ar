@@ -1,0 +1,44 @@
+trigger:
+  branches:
+    include:
+      - develop
+      - master
+
+pr:
+  autoCancel: true
+  branches:
+    include:
+      - develop
+      - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  - group: firebase
+  - name: version
+    value: $(Build.BuildNumber)
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.x'
+  displayName: 'Install Node.js'
+
+- script: sudo npm i -g firebase-tools
+  displayName: 'firebase-cli tool'
+
+- script: yarn install
+  displayName: 'yarn install'
+
+- task: ReplaceTokens@1
+  inputs:
+    sourcePath: 'src'
+    filePattern: 'version.ts'
+    tokenRegex: '__(\w+)__'
+
+- script: yarn build
+  displayName: 'yarn build'
+
+- script: firebase deploy --token "$(firebaseToken)"
+  displayName: deploy

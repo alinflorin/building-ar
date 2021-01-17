@@ -1,0 +1,9 @@
+@import '../../../styles/vars.scss';
+
+.footer {
+    height: 30px;
+    background: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,87 @@
+@import "./vars.scss";
+
+html,
+body {
+  width: 100% !important;
+  height: 100% !important;
+  
+}
+
+body {
+  margin: 0 !important;
+  color: $color;
+  background: $background;
+  font-family: "Roboto";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $fontSize;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+input,button,textarea,table {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+
+.clickable {
+  cursor: pointer;
+}
+
+.errors {
+  color: $warn;
+  list-style: none;
+}
+
+.form-group {
+  padding: 0.5rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: $accent;
+  font-family: inherit;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: solid 2px $accent;
+  color: $color;
+  font-family: inherit;
+  padding: 0.5rem;
+}
+
+button {
+  background: transparent;
+  border-radius: 4px;
+  border: solid 2px $accent;
+  color: $color;
+  font-family: inherit;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+input:disabled {
+  border-color: $gray;
+  color: $gray;
+}
+
+button:disabled {
+  border-color: $gray;
+  color: $gray;
+}
+
+.flex-auto {
+  flex: auto;
+}

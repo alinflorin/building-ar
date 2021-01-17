@@ -1,0 +1,29 @@
+@import '../../../styles/vars.scss';
+
+.header {
+    height: 62px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background: $primary;
+    display: flex;
+    align-items: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+}
+
+
+.userInfo {
+    span {
+        margin-right: 0.5rem;
+        display: inline-block;
+    }
+}
